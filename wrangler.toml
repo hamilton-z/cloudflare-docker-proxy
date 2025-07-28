@@ -12,7 +12,7 @@ CUSTOM_DOMAIN = "libcuda.so"
 [env.dev.vars]
 MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
-CUSTOM_DOMAIN = "exmaple.com"
+CUSTOM_DOMAIN = "macmillan.world"
 
 [env.production]
 name = "cloudflare-docker-proxy"
@@ -25,6 +25,15 @@ name = "cloudflare-docker-proxy"
 #   { pattern = "ghcr.libcuda.so", custom_domain = true },
 #   { pattern = "cloudsmith.libcuda.so", custom_domain = true },
 # ]
+routes = [
+  { pattern = "docker.macmillan.world", custom_domain = true },
+  { pattern = "quay.macmillan.world", custom_domain = true },
+  { pattern = "gcr.macmillan.world", custom_domain = true },
+  { pattern = "k8s-gcr.macmillan.world", custom_domain = true },
+  { pattern = "k8s.macmillan.world", custom_domain = true },
+  { pattern = "ghcr.macmillan.world", custom_domain = true },
+  { pattern = "cloudsmith.macmillan.world", custom_domain = true },
+]
 
 [env.production.vars]
 MODE = "production"
