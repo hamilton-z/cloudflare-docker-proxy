@@ -6,19 +6,8 @@ addEventListener("fetch", (event) => {
 const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
-  // // production
-  // ["docker." + CUSTOM_DOMAIN]: dockerHub,
-  // ["quay." + CUSTOM_DOMAIN]: "https://quay.io",
-  // ["gcr." + CUSTOM_DOMAIN]: "https://gcr.io",
-  // ["k8s-gcr." + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
-  // ["k8s." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
-  // ["ghcr." + CUSTOM_DOMAIN]: "https://ghcr.io",
-  // ["cloudsmith." + CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
-  // ["ecr." + CUSTOM_DOMAIN]: "https://public.ecr.aws",
-
-  // // staging
-  // ["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
-  "docker.macmillan.world": "https://registry-1.docker.io",
+  // production
+  "docker.macmillan.world": dockerHub,
   "quay.macmillan.world": "https://quay.io",
   "gcr.macmillan.world": "https://gcr.io",
   "k8s-gcr.macmillan.world": "https://k8s.gcr.io",
@@ -26,6 +15,9 @@ const routes = {
   "ghcr.macmillan.world": "https://ghcr.io",
   "cloudsmith.macmillan.world": "https://docker.cloudsmith.io",
 
+  // staging
+  "docker-staging.macmillan.world": dockerHub,
+  
 };
 
 function routeByHosts(host) {
